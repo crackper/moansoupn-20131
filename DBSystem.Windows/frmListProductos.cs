@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DBSystem.BusinessLogic;
+using DBSystem.BusinessEntities;
 
 namespace DBSystem.Windows
 {
@@ -37,6 +38,20 @@ namespace DBSystem.Windows
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void brnEditar_Click(object sender, EventArgs e)
+        {
+            var productoDTO = productoDTOBindingSource.Current as ProductoDTO;
+
+            if (productoDTO != null)
+            {
+                var frmProducto = new frmProducto();
+                frmProducto.UpdateProducto(productoDTO.Id);
+                frmProducto.ShowDialog();
+            }
+
+            
         }
     }
 }

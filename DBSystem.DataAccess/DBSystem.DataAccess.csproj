@@ -45,7 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaDAO.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="ICategoriaDAO.cs" />
     <Compile Include="IProductoDAO.cs" />
     <Compile Include="MasterDataAccess.cs" />
@@ -60,6 +59,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="dcDataAccess.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

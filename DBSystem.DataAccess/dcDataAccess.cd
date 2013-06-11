@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DBSystem.DataAccess.MasterDataAccess">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAACAAAAAAAAACAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>MasterDataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBSystem.DataAccess.ObjectFactory&lt;TDTO, TEntiy&gt;">
+    <Position X="3.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEAAAQAAAAAAAA=</HashCode>
+      <FileName>ObjectFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DBSystem.DataAccess.ProductoDAO">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAEgAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductoDAO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

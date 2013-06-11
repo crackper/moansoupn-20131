@@ -9,16 +9,16 @@ using DBSystem.BusinessEntities;
 
 namespace DBSystem.DataAccess
 {
-    public class ProductoDAO: MasterDataAccess,IProductoDAO
+    public class ProductoDAO: ObjectFactory<ProductoDTO,Producto>,IProductoDAO
     {
 
         public List<ProductoDTO> GetAllFromProductoDTO()
         {
             var query = "GetAllFromProductoDTO";
  
-            var command = CreateComand(query);
+            var command = base.CreateComand(query);
 
-            return SelectObjectFactory(command);
+            return base.GetListDTO(command);
         }
 
         public List<ProductoDTO> GetFromProductoByCriterioAndCategoriaIdDTO(string criterio, int categoriaId)
@@ -31,15 +31,25 @@ namespace DBSystem.DataAccess
            base.AddParameter(command, "descripcion", criterio);
            base.AddParameter(command,"categoriaId", categoriaId);
 
-           return SelectObjectFactory(command);
+           return base.GetListDTO(command);
 
         }
 
-       
-
         public void RegistrarProducto(Producto producto)
         {
-            throw new NotImplementedException();
+            var query = "RegistrarProducto";
+
+            var command = base.CreateComand(query);
+
+            base.AddParameter(command, "id", producto.Id);
+            base.AddParameter(command, "codigo", producto.Codigo);
+            base.AddParameter(command, "categoriaId", producto.CategoriaId);
+            base.AddParameter(command, "descripcion", producto.Descripcion);
+            base.AddParameter(command, "precio", producto.Precio);
+            base.AddParameter(command, "stock", producto.Stock);
+            base.AddParameter(command, "descontinuado", producto.Descontinuado);
+
+            base.ExecuteNonQuery(command);
         }
 
         public void DeleteProducto(int id)
@@ -47,39 +57,16 @@ namespace DBSystem.DataAccess
             throw new NotImplementedException();
         }
 
-        private List<ProductoDTO> SelectObjectFactory(SqlCommand command)
+
+        public Producto GetFromProductoById(int id)
         {
-            var lista = new List<ProductoDTO>();
+            var query = "GetFromProductoById";
 
-            using (var reader = base.ExecuteReader(command))
-            {
+            var command = base.CreateComand(query);
 
-                if (reader.HasRows)
-                {
-                    AutoMapper.Mapper.CreateMap<IDataReader, ProductoDTO>();
-                    lista = AutoMapper.Mapper.Map<IDataReader, List<ProductoDTO>>(reader);
-                }
-                /*while (reader.Read())
-                {
-                    var producto = new ProductoDTO()
-                    {
-                        Id = reader.GetInt32(reader.GetOrdinal("id")),
-                        Codigo = reader.GetString(reader.GetOrdinal("codigo")),
-                        Categoria = reader.GetString(reader.GetOrdinal("categoria")),
-                        Descripcion = reader.GetString(reader.GetOrdinal("descripcion")),
-                        Precio = reader.GetDecimal(reader.GetOrdinal("precio")),
-                        Stock = reader.GetDecimal(reader.GetOrdinal("stock")),
-                        Descontinuado = reader.GetBoolean(reader.GetOrdinal("descontinuado"))
-                    };
+            base.AddParameter(command, "id", id);
 
-                    lista.Add(producto);
-                }*/
-
-            }
-            return lista;
+            return base.GetEntity(command);
         }
-
-
-        
     }
 }

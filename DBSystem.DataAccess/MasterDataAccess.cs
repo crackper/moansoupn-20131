@@ -42,5 +42,16 @@ namespace DBSystem.DataAccess
 
             return command.ExecuteReader(CommandBehavior.CloseConnection);
         }
+
+        protected int ExecuteNonQuery(SqlCommand command)
+        {
+            var affect = 0;
+
+            cnx.Open();
+            affect = command.ExecuteNonQuery();
+            cnx.Close();
+
+            return affect;
+        }
     }
 }

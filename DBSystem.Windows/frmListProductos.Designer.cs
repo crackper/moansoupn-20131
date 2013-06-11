@@ -32,10 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCriterio = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.productoDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtCriterio = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.productoDTODataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,10 +43,12 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.productoDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brnEditar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productoDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoDTODataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoDTOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,22 +83,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Criterio:";
-            // 
-            // txtCriterio
-            // 
-            this.txtCriterio.Location = new System.Drawing.Point(59, 19);
-            this.txtCriterio.Name = "txtCriterio";
-            this.txtCriterio.Size = new System.Drawing.Size(326, 20);
-            this.txtCriterio.TabIndex = 1;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(392, 17);
@@ -108,9 +93,21 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // productoDTOBindingSource
+            // txtCriterio
             // 
-            this.productoDTOBindingSource.DataSource = typeof(DBSystem.BusinessEntities.ProductoDTO);
+            this.txtCriterio.Location = new System.Drawing.Point(59, 19);
+            this.txtCriterio.Name = "txtCriterio";
+            this.txtCriterio.Size = new System.Drawing.Size(326, 20);
+            this.txtCriterio.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Criterio:";
             // 
             // productoDTODataGridView
             // 
@@ -173,11 +170,26 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "Descontinuado";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
+            // productoDTOBindingSource
+            // 
+            this.productoDTOBindingSource.DataSource = typeof(DBSystem.BusinessEntities.ProductoDTO);
+            // 
+            // brnEditar
+            // 
+            this.brnEditar.Location = new System.Drawing.Point(13, 347);
+            this.brnEditar.Name = "brnEditar";
+            this.brnEditar.Size = new System.Drawing.Size(75, 23);
+            this.brnEditar.TabIndex = 4;
+            this.brnEditar.Text = "Editar";
+            this.brnEditar.UseVisualStyleBackColor = true;
+            this.brnEditar.Click += new System.EventHandler(this.brnEditar_Click);
+            // 
             // frmListProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 392);
+            this.Controls.Add(this.brnEditar);
             this.Controls.Add(this.productoDTODataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -188,8 +200,8 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productoDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoDTODataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoDTOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,5 +223,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Button brnEditar;
     }
 }

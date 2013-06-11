@@ -36,5 +36,11 @@ namespace DBSystem.BusinessLogic
         {
             productoDAO.DeleteProducto(id);
         }
+
+
+        public Producto GetFromProductoById(int id)
+        {
+            return productoDAO.GetFromProductoById(id);
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace DBSystem.DataAccess
         List<ProductoDTO> GetAllFromProductoDTO();
         List<ProductoDTO> GetFromProductoByCriterioAndCategoriaIdDTO(string criterio, Int32 categoriaId);
         
+        Producto GetFromProductoById(Int32 id);
+        
         void RegistrarProducto(Producto producto);
         void DeleteProducto(Int32 id);
     }

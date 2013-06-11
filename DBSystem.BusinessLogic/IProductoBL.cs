@@ -12,5 +12,6 @@ namespace DBSystem.BusinessLogic
         List<ProductoDTO> GetFromProductoByCriterioAndCategoriaIdDTO(string criterio, Int32 categoriaId);
         void RegistrarProducto(Producto producto);
         void DeleteProducto(int id);
+        Producto GetFromProductoById(Int32 id);
     }
 }
