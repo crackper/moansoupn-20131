@@ -54,7 +54,9 @@ namespace DBSystem.DataAccess
 
         public void DeleteProducto(int id)
         {
-            throw new NotImplementedException();
+            var command = base.CreateComand("DeleteProducto");
+            base.AddParameter(command, "id", id);
+            base.ExecuteNonQuery(command);
         }
 
 

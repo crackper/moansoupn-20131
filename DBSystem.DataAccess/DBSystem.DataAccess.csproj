@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaDAO.cs" />
+    <Compile Include="ClienteDAO.cs" />
     <Compile Include="ICategoriaDAO.cs" />
+    <Compile Include="IClienteDAO.cs" />
     <Compile Include="IProductoDAO.cs" />
     <Compile Include="MasterDataAccess.cs" />
     <Compile Include="ObjectFactory.cs" />
@@ -53,9 +55,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DBSystem.Entities\DBSystem.Entities.csproj">
+    <ProjectReference Include="..\DBSystem.Entities\DBSystem.BusinessEntities.csproj">
       <Project>{B8E9D990-80C3-44EC-A85F-78837548F27D}</Project>
-      <Name>DBSystem.Entities</Name>
+      <Name>DBSystem.BusinessEntities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

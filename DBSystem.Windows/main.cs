@@ -29,5 +29,12 @@ namespace DBSystem.Windows
             frmPedidos.MdiParent = this;
             frmPedidos.Show();*/
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmClientes = new frmListClientes();
+            frmClientes.MdiParent = this;
+            frmClientes.Show();
+        }
     }
 }

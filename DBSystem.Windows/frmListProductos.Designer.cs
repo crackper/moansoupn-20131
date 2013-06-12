@@ -45,6 +45,8 @@
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.productoDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.brnEditar = new System.Windows.Forms.Button();
+            this.bntNuevo = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoDTODataGridView)).BeginInit();
@@ -176,7 +178,7 @@
             // 
             // brnEditar
             // 
-            this.brnEditar.Location = new System.Drawing.Point(13, 347);
+            this.brnEditar.Location = new System.Drawing.Point(90, 357);
             this.brnEditar.Name = "brnEditar";
             this.brnEditar.Size = new System.Drawing.Size(75, 23);
             this.brnEditar.TabIndex = 4;
@@ -184,11 +186,33 @@
             this.brnEditar.UseVisualStyleBackColor = true;
             this.brnEditar.Click += new System.EventHandler(this.brnEditar_Click);
             // 
+            // bntNuevo
+            // 
+            this.bntNuevo.Location = new System.Drawing.Point(9, 357);
+            this.bntNuevo.Name = "bntNuevo";
+            this.bntNuevo.Size = new System.Drawing.Size(75, 23);
+            this.bntNuevo.TabIndex = 5;
+            this.bntNuevo.Text = "Nuevo";
+            this.bntNuevo.UseVisualStyleBackColor = true;
+            this.bntNuevo.Click += new System.EventHandler(this.bntNuevo_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(171, 357);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 6;
+            this.btnEliminar.Text = "Elimniar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // frmListProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 392);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.bntNuevo);
             this.Controls.Add(this.brnEditar);
             this.Controls.Add(this.productoDTODataGridView);
             this.Controls.Add(this.groupBox1);
@@ -224,5 +248,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.Button brnEditar;
+        private System.Windows.Forms.Button bntNuevo;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaBL.cs" />
+    <Compile Include="ClienteBL.cs" />
     <Compile Include="ICategoriaBL.cs" />
+    <Compile Include="IClienteBL.cs" />
     <Compile Include="IProductoBL.cs" />
     <Compile Include="ProductoBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -51,9 +53,9 @@
       <Project>{67503F7D-3E04-4819-B3B2-9B362E65D2DD}</Project>
       <Name>DBSystem.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DBSystem.Entities\DBSystem.Entities.csproj">
+    <ProjectReference Include="..\DBSystem.Entities\DBSystem.BusinessEntities.csproj">
       <Project>{B8E9D990-80C3-44EC-A85F-78837548F27D}</Project>
-      <Name>DBSystem.Entities</Name>
+      <Name>DBSystem.BusinessEntities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

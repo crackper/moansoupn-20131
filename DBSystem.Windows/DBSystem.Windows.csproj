@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmListClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListClientes.Designer.cs">
+      <DependentUpon>frmListClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmListClientes.resx">
+      <DependentUpon>frmListClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListProductos.resx">
       <DependentUpon>frmListProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +94,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\DBSystem.BusinessEntities.Categoria.datasource" />
+    <None Include="Properties\DataSources\DBSystem.BusinessEntities.Cliente.datasource" />
     <None Include="Properties\DataSources\DBSystem.BusinessEntities.Producto.datasource" />
     <None Include="Properties\DataSources\DBSystem.BusinessEntities.ProductoDTO.datasource" />
     <None Include="Properties\Settings.settings">
@@ -102,9 +113,9 @@
       <Project>{00DCA0ED-55C7-4476-B899-2ABCBDB6AFB0}</Project>
       <Name>DBSystem.BusinessLogic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DBSystem.Entities\DBSystem.Entities.csproj">
+    <ProjectReference Include="..\DBSystem.Entities\DBSystem.BusinessEntities.csproj">
       <Project>{B8E9D990-80C3-44EC-A85F-78837548F27D}</Project>
-      <Name>DBSystem.Entities</Name>
+      <Name>DBSystem.BusinessEntities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

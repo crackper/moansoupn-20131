@@ -14,6 +14,7 @@ namespace DBSystem.Windows
     public partial class frmProducto : Form
     {
         IProductoBL productoBL;
+        ICategoriaBL categoriaBL;
 
         public frmProducto()
         {
@@ -23,6 +24,14 @@ namespace DBSystem.Windows
             {
                 productoBL = new ProductoBL();
             }
+
+            if (categoriaBL == null)
+            {
+                categoriaBL = new CategoriaBL();
+            }
+
+            categoriaBindingSource.DataSource =
+                categoriaBL.GetAllFromCategoria();
         }
 
         private void frmProducto_Load(object sender, EventArgs e)
@@ -36,9 +45,14 @@ namespace DBSystem.Windows
                 productoBL.GetFromProductoById(id);
         }
 
+        public void AddProducto()
+        {
+            productoBindingSource.AddNew();
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            var producto = productoBindingSource.DataSource as Producto;
+            var producto = productoBindingSource.Current as Producto;
 
             productoBL.RegistrarProducto(producto);
         }

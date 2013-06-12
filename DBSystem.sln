@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Acceso a datos", "Acceso a 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logica de Negocio", "Logica de Negocio", "{53EEC5FB-FA15-4492-A05A-22E2372014F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBSystem.Entities", "DBSystem.Entities\DBSystem.Entities.csproj", "{B8E9D990-80C3-44EC-A85F-78837548F27D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBSystem.BusinessEntities", "DBSystem.Entities\DBSystem.BusinessEntities.csproj", "{B8E9D990-80C3-44EC-A85F-78837548F27D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBSystem.BusinessLogic", "DBSystem.BusinessLogic\DBSystem.BusinessLogic.csproj", "{00DCA0ED-55C7-4476-B899-2ABCBDB6AFB0}"
 EndProject

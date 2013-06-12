@@ -16,7 +16,7 @@ namespace DBSystem.DataAccess
         public CategoriaDAO()
         {
             cnx = new SqlConnection();
-            cnx.ConnectionString = ConfigurationManager.ConnectionStrings["cnx"].ConnectionString;
+            cnx.ConnectionString = "Data Source=(local);Initial Catalog=DBSystem;Integrated Security=True";//ConfigurationManager.ConnectionStrings["cnx"].ConnectionString;
         }
 
         public List<Categoria> GetAllFromCategoria()

@@ -53,5 +53,32 @@ namespace DBSystem.Windows
 
             
         }
+
+        private void bntNuevo_Click(object sender, EventArgs e)
+        {
+            var frmProducto = new frmProducto();
+            frmProducto.AddProducto();
+            frmProducto.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var productoDTO = productoDTOBindingSource.Current as ProductoDTO;
+
+            if (productoDTO != null)
+            {
+                var rpt = MessageBox.Show(this,
+                    "Desea eliminar el producto: " + productoDTO.Descripcion,
+                    "Mensaje",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (rpt == DialogResult.Yes)
+                {
+                    productoBL.DeleteProducto(productoDTO.Id);
+                    productoDTOBindingSource.RemoveCurrent();
+                }
+            }
+        }
     }
 }
