@@ -44,7 +44,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="DetallePedido.cs" />
     <Compile Include="FormaPago.cs" />
-    <Compile Include="Pedido.cs" />
+    <Compile Include="PedidoDTO.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

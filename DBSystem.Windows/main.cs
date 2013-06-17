@@ -25,9 +25,9 @@ namespace DBSystem.Windows
 
         private void pedidosDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           /* frmListPedido frmPedidos = new frmListPedido();
+            var  frmPedidos = new frmListPedidos();
             frmPedidos.MdiParent = this;
-            frmPedidos.Show();*/
+            frmPedidos.Show();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)

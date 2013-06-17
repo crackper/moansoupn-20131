@@ -42,9 +42,13 @@
   <ItemGroup>
     <Compile Include="CategoriaBL.cs" />
     <Compile Include="ClienteBL.cs" />
+    <Compile Include="FormaPagoBL.cs" />
     <Compile Include="ICategoriaBL.cs" />
     <Compile Include="IClienteBL.cs" />
+    <Compile Include="IFormaPagoBL.cs" />
+    <Compile Include="IPedidoBL.cs" />
     <Compile Include="IProductoBL.cs" />
+    <Compile Include="PedidoBL.cs" />
     <Compile Include="ProductoBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -52,6 +52,12 @@
     <Compile Include="frmListClientes.Designer.cs">
       <DependentUpon>frmListClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListPedidos.Designer.cs">
+      <DependentUpon>frmListPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <EmbeddedResource Include="frmListClientes.resx">
       <DependentUpon>frmListClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListPedidos.resx">
+      <DependentUpon>frmListPedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListProductos.resx">
       <DependentUpon>frmListProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +105,8 @@
     <None Include="App.config" />
     <None Include="Properties\DataSources\DBSystem.BusinessEntities.Categoria.datasource" />
     <None Include="Properties\DataSources\DBSystem.BusinessEntities.Cliente.datasource" />
+    <None Include="Properties\DataSources\DBSystem.BusinessEntities.FormaPago.datasource" />
+    <None Include="Properties\DataSources\DBSystem.BusinessEntities.PedidoDTO.datasource" />
     <None Include="Properties\DataSources\DBSystem.BusinessEntities.Producto.datasource" />
     <None Include="Properties\DataSources\DBSystem.BusinessEntities.ProductoDTO.datasource" />
     <None Include="Properties\Settings.settings">

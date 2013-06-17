@@ -46,11 +46,15 @@
   <ItemGroup>
     <Compile Include="CategoriaDAO.cs" />
     <Compile Include="ClienteDAO.cs" />
+    <Compile Include="FormaPagoDAO.cs" />
     <Compile Include="ICategoriaDAO.cs" />
     <Compile Include="IClienteDAO.cs" />
+    <Compile Include="IFormaPagoDAO.cs" />
+    <Compile Include="IPedidoDAO.cs" />
     <Compile Include="IProductoDAO.cs" />
     <Compile Include="MasterDataAccess.cs" />
     <Compile Include="ObjectFactory.cs" />
+    <Compile Include="PedidoDAO.cs" />
     <Compile Include="ProductoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
