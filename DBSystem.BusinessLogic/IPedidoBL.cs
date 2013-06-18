@@ -9,5 +9,6 @@ namespace DBSystem.BusinessLogic
     public interface IPedidoBL
     {
         List<PedidoDTO> GetFromPedidoByClienteAndFormaPagoIdDTO(string cliente, Int32 idFormaPago);
+        PedidoDTO GetFromPedidoDTOById(Int32 id);
     }
 }

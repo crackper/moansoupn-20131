@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbFormaPago = new System.Windows.Forms.ComboBox();
+            this.formaPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtCriterio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbFormaPago = new System.Windows.Forms.ComboBox();
-            this.formaPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pedidoDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pedidoDTODataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +45,10 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoDTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoDTODataGridView)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +65,30 @@
             this.groupBox1.Size = new System.Drawing.Size(685, 51);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // cbFormaPago
+            // 
+            this.cbFormaPago.DataSource = this.formaPagoBindingSource;
+            this.cbFormaPago.DisplayMember = "Descripcion";
+            this.cbFormaPago.FormattingEnabled = true;
+            this.cbFormaPago.Location = new System.Drawing.Point(448, 18);
+            this.cbFormaPago.Name = "cbFormaPago";
+            this.cbFormaPago.Size = new System.Drawing.Size(147, 21);
+            this.cbFormaPago.TabIndex = 4;
+            this.cbFormaPago.ValueMember = "Id";
+            // 
+            // formaPagoBindingSource
+            // 
+            this.formaPagoBindingSource.DataSource = typeof(DBSystem.BusinessEntities.FormaPago);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(360, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Forma de Pago:";
             // 
             // btnBuscar
             // 
@@ -111,30 +136,6 @@
             this.label1.Size = new System.Drawing.Size(97, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pedidos";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(360, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Forma de Pago:";
-            // 
-            // cbFormaPago
-            // 
-            this.cbFormaPago.DataSource = this.formaPagoBindingSource;
-            this.cbFormaPago.DisplayMember = "Descripcion";
-            this.cbFormaPago.FormattingEnabled = true;
-            this.cbFormaPago.Location = new System.Drawing.Point(448, 18);
-            this.cbFormaPago.Name = "cbFormaPago";
-            this.cbFormaPago.Size = new System.Drawing.Size(147, 21);
-            this.cbFormaPago.TabIndex = 4;
-            this.cbFormaPago.ValueMember = "Id";
-            // 
-            // formaPagoBindingSource
-            // 
-            this.formaPagoBindingSource.DataSource = typeof(DBSystem.BusinessEntities.FormaPago);
             // 
             // pedidoDTOBindingSource
             // 
@@ -186,11 +187,22 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Total";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(14, 355);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 5;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // frmListPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 390);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.pedidoDTODataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -199,9 +211,9 @@
             this.Load += new System.EventHandler(this.frmListPedidos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoDTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoDTODataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -226,5 +238,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

@@ -46,9 +46,11 @@
   <ItemGroup>
     <Compile Include="CategoriaDAO.cs" />
     <Compile Include="ClienteDAO.cs" />
+    <Compile Include="DetallePedidoDAO.cs" />
     <Compile Include="FormaPagoDAO.cs" />
     <Compile Include="ICategoriaDAO.cs" />
     <Compile Include="IClienteDAO.cs" />
+    <Compile Include="IDetallePedidoDAO.cs" />
     <Compile Include="IFormaPagoDAO.cs" />
     <Compile Include="IPedidoDAO.cs" />
     <Compile Include="IProductoDAO.cs" />

@@ -50,5 +50,14 @@ namespace DBSystem.Windows
         {
             LoadData();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            var pedido = pedidoDTOBindingSource.Current as PedidoDTO;
+
+            var frmPedido = new frmPedido();
+            frmPedido.UpdatePedido(pedido.Id);
+            frmPedido.ShowDialog();
+        }
     }
 }

@@ -23,5 +23,11 @@ namespace DBSystem.BusinessLogic
         {
             return pedidoDAO.GetFromPedidoByClienteAndFormaPagoIdDTO(cliente, idFormaPago);
         }
+
+
+        public PedidoDTO GetFromPedidoDTOById(int id)
+        {
+            return pedidoDAO.GetFromPedidoDTOById(id);
+        }
     }
 }

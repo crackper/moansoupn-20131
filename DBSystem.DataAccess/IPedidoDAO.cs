@@ -9,5 +9,6 @@ namespace DBSystem.DataAccess
     public interface IPedidoDAO
     {
         List<PedidoDTO> GetFromPedidoByClienteAndFormaPagoIdDTO(string cliente, Int32 idFormaPago);
+        PedidoDTO GetFromPedidoDTOById(Int32 id);
     }
 }

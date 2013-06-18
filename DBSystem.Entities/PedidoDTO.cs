@@ -12,10 +12,12 @@ namespace DBSystem.BusinessEntities
         public Int32 ClienteId { get; set; }
         public string RucDni { get; set; }
         public string RazonSocial { get; set; }
-        public string Dirección { get; set; }
+        public string Direccion { get; set; }
         public Int32 FormaPagoId { get; set; }
         public string FormaPago { get; set; }
         public DateTime Fecha { get; set; }
-        public decimal Total { get; set; } 
+        public decimal Total { get; set; }
+
+        public List<DetallePedido> DetallePedido { get; set; }
     }
 }
