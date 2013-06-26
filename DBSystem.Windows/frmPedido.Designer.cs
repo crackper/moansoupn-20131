@@ -40,6 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.pedidoDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.razonSocialTextBox = new System.Windows.Forms.TextBox();
@@ -48,27 +49,27 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.formaPagoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.formaPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtCriterio = new System.Windows.Forms.TextBox();
             this.productoDTODataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.detallePedidoDataGridView = new System.Windows.Forms.DataGridView();
-            this.detallePedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pedidoDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.detallePedidoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formaPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.detallePedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnGuardar = new System.Windows.Forms.Button();
             direccionLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
             razonSocialLabel = new System.Windows.Forms.Label();
@@ -78,16 +79,16 @@
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoDTOBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoDTODataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoDTOBindingSource)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detallePedidoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallePedidoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoDTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoDTOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // direccionLabel
@@ -191,6 +192,10 @@
             this.direccionTextBox.Size = new System.Drawing.Size(219, 20);
             this.direccionTextBox.TabIndex = 7;
             // 
+            // pedidoDTOBindingSource
+            // 
+            this.pedidoDTOBindingSource.DataSource = typeof(DBSystem.BusinessEntities.PedidoDTO);
+            // 
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pedidoDTOBindingSource, "Fecha", true));
@@ -276,6 +281,10 @@
             this.formaPagoIdComboBox.TabIndex = 24;
             this.formaPagoIdComboBox.ValueMember = "Id";
             // 
+            // formaPagoBindingSource
+            // 
+            this.formaPagoBindingSource.DataSource = typeof(DBSystem.BusinessEntities.FormaPago);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnAgregar);
@@ -337,70 +346,6 @@
             this.productoDTODataGridView.Size = new System.Drawing.Size(650, 112);
             this.productoDTODataGridView.TabIndex = 0;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.detallePedidoDataGridView);
-            this.groupBox4.Location = new System.Drawing.Point(17, 387);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(671, 196);
-            this.groupBox4.TabIndex = 25;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Detalle Pedido";
-            // 
-            // detallePedidoDataGridView
-            // 
-            this.detallePedidoDataGridView.AllowUserToAddRows = false;
-            this.detallePedidoDataGridView.AutoGenerateColumns = false;
-            this.detallePedidoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.detallePedidoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.Monto});
-            this.detallePedidoDataGridView.DataSource = this.detallePedidoBindingSource;
-            this.detallePedidoDataGridView.Location = new System.Drawing.Point(14, 19);
-            this.detallePedidoDataGridView.Name = "detallePedidoDataGridView";
-            this.detallePedidoDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Yellow;
-            this.detallePedidoDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.detallePedidoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.detallePedidoDataGridView.Size = new System.Drawing.Size(645, 145);
-            this.detallePedidoDataGridView.TabIndex = 0;
-            // 
-            // detallePedidoBindingSource
-            // 
-            this.detallePedidoBindingSource.DataMember = "DetallePedido";
-            this.detallePedidoBindingSource.DataSource = this.pedidoDTOBindingSource;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Codigo";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Cantidad";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Precio";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // pedidoDTOBindingSource
-            // 
-            this.pedidoDTOBindingSource.DataSource = typeof(DBSystem.BusinessEntities.PedidoDTO);
-            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Categoria";
@@ -435,6 +380,61 @@
             // 
             this.productoDTOBindingSource.DataSource = typeof(DBSystem.BusinessEntities.ProductoDTO);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.detallePedidoDataGridView);
+            this.groupBox4.Location = new System.Drawing.Point(17, 387);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(671, 179);
+            this.groupBox4.TabIndex = 25;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Detalle Pedido";
+            // 
+            // detallePedidoDataGridView
+            // 
+            this.detallePedidoDataGridView.AllowUserToAddRows = false;
+            this.detallePedidoDataGridView.AutoGenerateColumns = false;
+            this.detallePedidoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.detallePedidoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.Monto});
+            this.detallePedidoDataGridView.DataSource = this.detallePedidoBindingSource;
+            this.detallePedidoDataGridView.Location = new System.Drawing.Point(14, 19);
+            this.detallePedidoDataGridView.Name = "detallePedidoDataGridView";
+            this.detallePedidoDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Yellow;
+            this.detallePedidoDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.detallePedidoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.detallePedidoDataGridView.Size = new System.Drawing.Size(645, 145);
+            this.detallePedidoDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Codigo";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Descripcion";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Cantidad";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Precio";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
             // Monto
             // 
             this.Monto.DataPropertyName = "Monto";
@@ -442,15 +442,27 @@
             this.Monto.Name = "Monto";
             this.Monto.ReadOnly = true;
             // 
-            // formaPagoBindingSource
+            // detallePedidoBindingSource
             // 
-            this.formaPagoBindingSource.DataSource = typeof(DBSystem.BusinessEntities.FormaPago);
+            this.detallePedidoBindingSource.DataMember = "DetallePedido";
+            this.detallePedidoBindingSource.DataSource = this.pedidoDTOBindingSource;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(22, 572);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 593);
+            this.ClientSize = new System.Drawing.Size(697, 618);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -463,19 +475,19 @@
             this.Load += new System.EventHandler(this.frmPedido_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoDTOBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productoDTODataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoDTOBindingSource)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.detallePedidoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallePedidoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoDTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoDTOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formaPagoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -515,5 +527,6 @@
         private System.Windows.Forms.BindingSource detallePedidoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
         private System.Windows.Forms.BindingSource formaPagoBindingSource;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

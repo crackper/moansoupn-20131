@@ -139,5 +139,10 @@ namespace DBSystem.Windows
                 detallePedidoBindingSource.ResetBindings(true);
             }
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            var pedido = pedidoDTOBindingSource.Current as PedidoDTO;
+        }
     }
 }
